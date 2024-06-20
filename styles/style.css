@@ -1,0 +1,369 @@
+@import url(./reset.css);
+
+:root {
+    --background-color: #FFFFFF;
+    --primary: #5D04D9;
+    --secondary: #03318C;
+    --text-color: #FFFFFF;
+    --product-width: 65vw;
+    --form-width: 25vw;
+    --section-height: 50vh;
+    --test-background: #dfdfdf;
+}
+
+body {
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* header */
+
+header {
+    display: flex;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary);
+}
+
+/* main */
+
+.main__box {
+    display: flex;
+    padding: 4rem;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+/* product section */
+
+.product__box {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-flow: column nowrap;
+    width: var(--product-width);
+    box-shadow: -10px 10px 8px 0px #D6D6D6;
+    padding: 2rem;
+    height: var(--section-height);
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.title {
+    font-size: 24px;
+    margin: 0 0 2rem 0;
+    text-align: center;
+}
+
+.alert {
+    display: inline;
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 18px;
+    color: #FF0000;
+    margin: 2rem 0 0 0;
+    text-align: center;
+    line-height: 2em;
+}
+
+.card__box {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    gap: 15px;
+}
+
+
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-flow: column wrap;
+    background-color: #5D04D9;
+    height: 260px;
+    width: 200px;
+    border-radius: 10px;
+    border: solid 3px #000000;
+    text-align: start;
+    color: #FFFFFF;
+    padding: 10px 0;
+    box-shadow: -5px 5px 5px 0px #D6D6D6;
+    transition: 200ms;
+    margin-top: 1rem;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card__img {
+    height: 180px;
+    width: 180px;
+    outline: 3px solid #000000;
+    border-radius: 10px;
+}
+
+.card__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-flow: row nowrap;
+    width: 180px;
+}
+
+.card__name {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    width: 180px;
+}
+
+.card__description {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 16px;
+}
+
+.card__img,
+.card__name,
+.delete_img {
+    cursor: pointer;
+}
+
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-3px);
+    }
+
+    50% {
+        transform: translateX(3px);
+    }
+
+    75% {
+        transform: translateX(-3px);
+    }
+}
+
+.delete_img:hover {
+    animation: shake 0.5s;
+}
+
+/* form section */
+
+.form__box {
+    display: flex;
+    align-items: center;
+    flex-flow: column nowrap;
+    height: var(--section-height);
+    width: var(--form-width);
+}
+
+.main__form {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-flow: column nowrap;
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.form__field {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    margin: 0 auto;
+    background-color: var(--background-color);
+    position: relative;
+}
+
+.form__input {
+    height: 40px;
+    width: 20vw;
+    background: transparent;
+    transition: all .3s ease;
+    padding: 0 15px;
+    border: solid 3px var(--secondary);
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.form__name {
+    position: absolute;
+    cursor: text;
+    z-index: 2;
+    top: 13px;
+    left: 10px;
+    padding: 0 15px;
+    color: var(--secondary);
+    transition: all .3s ease;
+    /* color: var(--secondary); */
+    background-color: var(--background-color);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.form__input:focus+.form__name,
+.form__input:valid+.form__name {
+    font-size: 14px;
+    top: -5px;
+}
+
+.form__input:focus+.form__name {
+    color: #0000FF;
+}
+
+.form__input:focus {
+    border-color: #0000FF;
+    outline: 1px solid #0000FF;
+}
+
+.form__button__box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 25vw;
+}
+
+.form__button {
+    width: 10vw;
+    height: 50px;
+    border-radius: 15px;
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 18px;
+    border: 3px solid var(--secondary);
+}
+
+#send__button {
+    background-color: var(--secondary);
+    color: #FFFFFF;
+}
+
+#clear__button {
+    background-color: var(--background-color);
+    color: var(--secondary);
+}
+
+.footer_box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column nowrap;
+    gap: 1rem;
+    background-color: var(--primary);
+    padding: 4rem;
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 16px;
+    text-align: center;
+    color: var(--text-color);
+}
+
+.footer_box span {
+    font-weight: 200;
+}
+
+@media only screen and (max-width: 768px) {
+    .logo {
+        width: 80vw;
+    }
+
+    .main__box {
+        flex-flow: column nowrap;
+        padding: 2rem 1rem;
+    }
+
+    .product__box {
+        width: 90%;
+        box-shadow: none;
+        padding: 0;
+        height: 380px;
+        overflow-y: hidden;
+        margin: 0 0 2rem 0;
+        order: 2;
+    }
+
+    .card__box {
+        justify-content: flex-start;
+        flex-flow: row nowrap;
+        overflow-x: scroll;
+        gap: 15px;
+        height: 300px;
+        padding: 0 15px;
+    }
+
+    .card {
+        height: 220px;
+        width: 150px;
+        padding: 10px 10px;
+    }
+
+    .card__img {
+        height: 140px;
+        width: 140px;
+    }
+
+    .card__info {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        flex-flow: row nowrap;
+        width: 140px;
+    }
+
+    .card__name {
+        font-family: "IBM Plex Mono", monospace;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 16px;
+        width: 140px;
+    }
+
+    .card__description {
+        font-family: "IBM Plex Mono", monospace;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 16px;
+    }
+
+    .form__box {
+        order: 1;
+        width: 90%;
+        height: auto;
+        margin: 0 0 2rem 0;
+    }
+
+    .main__form {
+        padding: 0;
+    }
+
+    .form__input {
+        width: 75vw;
+    }
+
+    .form__button__box {
+        width: 100%;
+    }
+
+    .form__button {
+        width: 40%;
+        height: 40px;
+    }
+
+}

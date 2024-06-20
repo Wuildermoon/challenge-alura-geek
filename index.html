@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alura Geek</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <!-- Styleseet -->
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>
+            <img class="logo" src="./img/Logo.svg" alt="Tres corazones rojos junto al nomnbre de la pagina, Alura Geek">
+        </h1>
+    </header>
+    <main class="main__box">
+        <section class="product__box">
+            <h2 class="title">Mis Productos:</h2>
+            <ul class="card__box" data-products>
+                <!-- <li class="card">
+                    <img src="./img/example-img-1.png" alt="Cabeza de un soldado de Star Wars" class="card__img">
+                    <p class="card__name">Stormtrooper</p>
+                    <div class="card__info">
+                        <p class="card__description">$ 60,00</p>
+                        <img class="delete_img" src="./img/trash-icon.svg" alt="Basura" class="delete__img">
+                    </div>
+                </li>
+                <li class="card">
+                    <img src="./img/example-img-2.png" alt="Consola retro Game Boy" class="card__img">
+                    <p class="card__name">Game Boy Classic</p>
+                    <div class="card__info">
+                        <p class="card__description">$ 60,00</p>
+                        <img class="delete_img" src="./img/trash-icon.svg" alt="Basura" class="delete__img">
+                    </div>
+                </li> -->
+            </ul>
+        </section>
+        <section class="form__box">
+            <h2 class="title">Agregar producto:</h2>
+            <form class="main__form" data-form>
+                <fieldset class="form__field">
+                    <input class="form__input" type="text" name="product_name" id="product_name" required
+                        data-form-name>
+                    <label class="form__name" for="product_name">Nombre</label>
+                </fieldset>
+                <fieldset class="form__field">
+                    <input class="form__input" type="text" name="product_price" id="product_price" required
+                        data-form-price>
+                    <label class="form__name" for="product_price">Precio</label>
+                </fieldset>
+                <fieldset class="form__field">
+                    <input class="form__input" type="text" name="product_image" id="product_image" required
+                        data-form-image>
+                    <label class="form__name" for="product_image">Imagen</label>
+                </fieldset>
+                <div class="form__button__box">
+                    <button class="form__button" id="send__button" type="submit">Enviar</button>
+                    <button class="form__button" id="clear__button" type="reset">Limpiar</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer class="footer_box">
+        <img class="logo" src="./img/Logo.svg" alt="Tres corazones rojos junto al nomnbre de la pagina, Alura Geek">
+        <p>&copy DESARROLLADO POR WUILDERMAN BERRIOS</p>
+        <span>ALURA LATAM - 2024</span>
+    </footer>
+    <script type="module" src="./js/main.js" defer></script>
+</body>
+
+</html>
