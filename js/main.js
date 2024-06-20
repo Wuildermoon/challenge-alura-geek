@@ -14,6 +14,7 @@ export default async function noProduct() {
     if (APIList.length === 0) {
         productList.innerHTML = `<h2 class="alert">¡No se han agregado productos!<br> Intenta añadir más productos a trávez del formulario.<br> &#x1F605;</h2>`;
     } else {
+        productList.innerHTML = "";
         product.listProduct();
     }
 }
