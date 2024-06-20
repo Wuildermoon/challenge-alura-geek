@@ -29,6 +29,12 @@
       "name": "Figura Coleccionable de Goku ",
       "price": "49,99",
       "image": "https://http2.mlstatic.com/D_NQ_NP_820862-MLU71652616644_092023-O.webp"
+    },
+    {
+      "id": "8698",
+      "name": "Nintendo 64",
+      "price": "159,00",
+      "image": "https://m.media-amazon.com/images/I/51ZcT6Cv7SL.jpg"
     }
   ]
 }
