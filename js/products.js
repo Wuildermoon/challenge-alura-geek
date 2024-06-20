@@ -27,6 +27,9 @@ function createCard(id, title, price, image) {
 async function listProduct() {
     try {
         const APIList = await APIRequest.productList();
+        
+        productList.innerHTML = "";
+
         APIList.forEach(product => {
             productList.appendChild(createCard(product.id, product.name, product.price, product.image));
         });

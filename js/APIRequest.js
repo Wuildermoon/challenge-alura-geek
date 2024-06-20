@@ -46,7 +46,7 @@ async function deleteProduct(event) {
 
         event.target.closest('.card').remove();
 
-        noProduct();
+        await noProduct();
     } catch (err) {
         console.error(err);
         alert(`Error al eliminar el producto: ${err.message}`);

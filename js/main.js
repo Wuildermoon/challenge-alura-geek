@@ -4,7 +4,6 @@ import { product } from "./products.js";
 import { addProduct } from "./addProduct.js";
 
 const form = document.querySelector("[data-form]");
-const deleteButton = document.querySelector("[data-borrar]");
 
 // funcion para evaluar si hay o no productos registrados, si hay se renderizan; si no se muestra un mensaje
 export default async function noProduct() {
